@@ -89,7 +89,7 @@ public:
                         n.g = current.g + 1.41421;
                     else
                         n.g = current.g + 1;
-                    n.h = hweight * count_h_value(n, goal, metrictype); //оценивает от тек.соседа до цели с нужной эвристикой + hweight
+                    n.h = hweight * count_h_value(n, goal, metrictype); //оценивает от тек.соседа до цели с нужной эвристикой * hweight
                     n.f = n.g + n.h; // используем формулу f = g + h*w
                     n.parent = &(*CLOSED.find(current)); //указываем родителя соседа - это тек. вершина (из списка  closed)
                     OPEN.push_back(n); //добавляем соседа в open в конец
